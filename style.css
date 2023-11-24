@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabarito&family=Inclusive+Sans&family=Montserrat&family=Poppins&family=Roboto&family=Space+Grotesk&family=Ubuntu&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-transform: capitalize;
+    font-family: 'Gabarito', cursive;
+    font-family: 'Inclusive Sans', sans-serif;
+    font-family: 'Space Grotesk', sans-serif;
+    transition: all 0.5s linear;
+}
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 85px;
+    background-color: white;
+    box-shadow: rgba(100,100,111,0.2)
+    0px 7px 29px 0px;
+}
+.logo{
+    color: #FC6C85;
+    font-size: 30px;
+}
+.navbar li{
+    display: inline-block;
+    padding: 10px 8px;
+}
+.navbar li a{
+    text-decoration: none;
+    color: #777;
+    font-size: 20px;
+    padding: 4px;
+}
+.navbar ul li::after{
+    content: '';
+    height: 2px;
+    width: 0;
+    background: #FC6C85;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.navbar ul li:hover::after{
+    width: 100%;
+}
+.btn{
+    background-color: #FC6C85;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 27px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.burger{
+    display: none;
+    position: absolute;
+    z-index: 3;
+    top: 13%;
+    right: 5%;
+    cursor: pointer;
+    font-size: 33px;
+    color: #FC6C85;
+}
+.row{
+    padding: 2% 0;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.left_side{
+    width: 40%;
+}
+.left_side h1{
+    font-size: 50px;
+}
+.left_side h1 span{
+    color: #FC6C85;
+}
+.para{
+    color: #FC6C85;
+    padding-bottom: 1%;
+}
+.para_2{
+    color: #777;
+    padding: 2% 0;
+    font-size: 13px;
+}
+.btn1{
+    border-radius: 0;
+}
+.btn1:hover,.btn:hover{
+    background-color:blueviolet;
+}
+.right_side{
+    width: 50%;
+}
+.right_side img{
+    width: 100%;
+}
+/* _________skills________ */
+.main{
+    padding: 3% 0;
+    text-align: center;
+}
+.box{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2%;
+}
+.boxes{
+    text-align: left;
+    background-color: #ffeef1;
+    padding: 12px 15px;
+    margin: 2% 1%;
+    border-radius: 10px;
+}
+.boxes i{
+    border-radius: 50%;
+    background-color: #FC6C85;
+    padding: 10px;
+    font-size: 18px;
+    color: white;
+}
+.box div:nth-child(3){
+    background-color: #FC6C85;
+}
+.box div:nth-child(3) i{
+    background-color: blueviolet;
+}
+.box div:nth-child(3) p{
+    color: white;
+}
+/* __________testimonial________ */
+.testimonial{
+    width: 100%;
+    padding: 4% 0;
+    background-color: #ffeef1;
+}
+.client_box{
+    background-color: blueviolet;
+    width: 40%;
+    color: white;
+    padding: 2% 0;
+}
+.client_box img{
+    width: 10%;
+}
+.client_box h1{
+    padding: 2% 1%;
+}
+.prev, .next{
+    border-radius: 0;
+    margin: 2% 1%;
+    padding: 10px;
+}
+/* ________about_______ */
+.left_side img{
+    width: 70%;
+}
+.right_side{
+    text-align: left;
+}
+.points{
+    list-style: none;
+    color: #777;
+    padding-bottom: 12px;
+}
+.points li{
+    padding: 2px 0;
+}
+/* _____--contact________ */
+.form{
+    width: 35%;
+    margin: auto;
+    padding-top: 2%;
+}
+.form input,textarea{
+    width: 100%;
+    border: none;
+    padding: 12px 10px;
+    background-color: #f1f1f1;
+    margin: 8px 0px;
+    outline: none
+}
+.form button{
+    display: block;
+}
+.links i{
+    padding: 10px;
+    font-size: 20px;
+    background-color: #FC6C85;
+    color: white;
+    margin: 3% 0% 0% 1%;
+    cursor: pointer;
+}
+.links p{
+    padding-top: 20px;
+}
+.links i:hover{
+    background-color: blueviolet;
+}
+/* _____responsive */
+@media only screen and (max-width:870px){
+    .burger{
+        display: block;
+    }
+    .navbar{
+        height: 400px;
+        justify-content: space-around;
+        flex-direction: column;
+        transition: all 0.9s ease-out;
+        background-color: white;
+        position: relative;
+        overflow: hidden;
+        padding: 3% 0;
+    }
+    .navbar li{
+        display: block;
+    }
+    .h-class{
+        height: 78px;
+    }
+    .v-class{
+        opacity: 0;
+    }
+    .row{
+        flex-direction: column;
+        width: 100%;
+    }
+    .left_side,.right_side{
+        width: 80%;
+        margin-top: 8%;
+    }
+    .box{
+        flex-direction: column;
+    }
+    .client_box {
+        width: 70%;
+    }
+    .form{
+        width: 70%;
+    }
+    .left_side h1{
+        font-size: 38px;
+    }
+    .btn{
+        padding: 8px 15px;
+    }
+}
